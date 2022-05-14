@@ -54,19 +54,19 @@ export class Game {
       let price = 0;
       let same = 0;
       same = this.total_books - this.diff_books;
-      if(this.diff_books == 2){
-        price = same*100 + this.diff_books*100*0.95;
-      }
-      else if(this.diff_books == 3){
-        price = same*100 + this.diff_books*100*0.90;
-      }
-      else if(this.diff_books == 4){
-        price = same*100 + this.diff_books*100*0.8;
-      }
-      else if(this.diff_books == 5){
-        price = same*100 + this.diff_books*100*0.75;
-      }
+      price = this.caculatePrice(this.diff_books,same);
       return price;
+    }
+
+    private caculatePrice(differ:number,same: number) {
+      let discount = 0;
+      if(differ <= 3){
+        discount = 1 - (differ-1)*0.05;
+      }
+      else{
+        discount = 1 - differ*0.05;
+      }
+      return 100*(same + differ*discount);
     }
   }
   
