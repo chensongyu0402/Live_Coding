@@ -63,6 +63,9 @@ export class Game {
       else if(this.diff_books == 4){
         price = same*100 + this.diff_books*100*0.8;
       }
+      else if(this.diff_books == 5){
+        price = same*100 + this.diff_books*100*0.75;
+      }
       return price;
     }
   }
