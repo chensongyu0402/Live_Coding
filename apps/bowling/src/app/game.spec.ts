@@ -56,4 +56,10 @@ describe('Game', () => {
     game.buy(2,3);
     expect(game.price).toBe(290);
   });
+  
+  test('test on third different books', () => {
+    game.buy(3,4);
+    expect(game.price).toBe(370);
+  });
+
 });
