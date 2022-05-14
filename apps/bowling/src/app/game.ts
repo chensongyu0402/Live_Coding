@@ -55,10 +55,13 @@ export class Game {
       let same = 0;
       same = this.total_books - this.diff_books;
       if(this.diff_books == 2){
-        price = same*100 + this.diff_books*100*0.95 
+        price = same*100 + this.diff_books*100*0.95;
       }
       else if(this.diff_books == 3){
-        price = same*100 + this.diff_books*100*0.90 
+        price = same*100 + this.diff_books*100*0.90;
+      }
+      else if(this.diff_books == 4){
+        price = same*100 + this.diff_books*100*0.8;
       }
       return price;
     }
