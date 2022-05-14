@@ -52,4 +52,8 @@ describe('Game', () => {
     }
   }
   */
+  test('test on two classes book', () => {
+    game.buy(2,3);
+    expect(game.price).toBe(290);
+  });
 });
