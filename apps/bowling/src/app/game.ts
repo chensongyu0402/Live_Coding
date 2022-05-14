@@ -42,5 +42,22 @@ export class Game {
       return this.rolls[frameIndex + 2];
     }
     */
+    private diff_books = 0;
+    private total_books = 0;
+
+    buy(diff: number,total:number) {
+      this.diff_books = diff;
+      this.total_books = total;
+    }
+
+    get price() {
+      let price = 0;
+      let same = 0;
+      same = this.total_books - this.diff_books;
+      if(this.diff_books == 2){
+        price = same*100 + 2*100*0.95 
+      }
+      return price;
+    }
   }
   
