@@ -1,4 +1,5 @@
 // game.spec.ts
+import { TestBed } from '@angular/core/testing';
 import { Game } from './game';
 
 describe('Game', () => {
@@ -57,9 +58,14 @@ describe('Game', () => {
     expect(game.price).toBe(290);
   });
   
-  test('test on third different books', () => {
+  test('test on three different books', () => {
     game.buy(3,4);
     expect(game.price).toBe(370);
+  });
+
+  test('test on four different books', () => {
+    game.buy(4,5);
+    expect(game.price).toBe(420);
   });
 
 });
