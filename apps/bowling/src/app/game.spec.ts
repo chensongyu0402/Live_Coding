@@ -53,6 +53,11 @@ describe('Game', () => {
     }
   }
   */
+  test('test on one different book', () => {
+    game.buy(1,2);
+    expect(game.price).toBe(200);
+  });
+
   test('test on two classes book', () => {
     game.buy(2,3);
     expect(game.price).toBe(290);
