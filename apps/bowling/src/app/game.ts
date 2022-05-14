@@ -1,5 +1,6 @@
 // game.ts
 export class Game {
+    /*
     private rolls: number[] = [];
     private currentRoll = 0;
     roll(pins: number) {
@@ -40,5 +41,6 @@ export class Game {
     private spareBouns(frameIndex: number) {
       return this.rolls[frameIndex + 2];
     }
+    */
   }
   
